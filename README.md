@@ -2,8 +2,8 @@
 
 ## Requirements
 
-Node v12.19.0
-Mongo db
+- Node v12.19.0
+- Mongo db
 
 ## Setup
 ### Node dependencies
