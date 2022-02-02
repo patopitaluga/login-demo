@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+<meta charset="utf-8"/>
+<title>User information page</title>
+
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover"/>
+
+<link rel="stylesheet" href="/style.css"/>
+<style>
+[v-cloak] {
+  display: none !important
+}
+/* Hide Vue while loading */
+</style>
+</head>
+<body>
+<div id="app">
+  <div v-cloak style="margin: 5px 25px;">
+    <ul>
+      <li>
+        id: {{ vdUserInfo.id }}
+      </li>
+      <li>
+        avatar: {{ vdUserInfo.avatar }}
+      </li>
+      <li>
+        age: {{ vdUserInfo.age }}
+      </li>
+      <li>
+        email: {{ vdUserInfo.email }}
+      </li>
+      <li>
+        name: {{ vdUserInfo.name }}
+      </li>
+      <li>
+        surname: {{ vdUserInfo.surname }}
+      </li>
+      <li>
+        role: {{ vdUserInfo.role }}
+      </li>
+    </ul>
+    <button class="btn" @click="mtdLogOut">
+      Log out
+    </button>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="/user-info.js"></script>
+</body>
+</html>

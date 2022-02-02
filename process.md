@@ -1,0 +1,19 @@
+- The project might be viewed as a frontend project separated from the api endpoints so instead of this monolithic application, a separated repository with both parts as micro services would be preferred, but I'm setting it up in this single repo/project as an example.
+- I've created a .gitignore file that excludes the node_modules folder to be uploaded to the repository, also the .env file to allow every environment to have a different one.
+- I've started a new npm project using npm init -y, that created a basic package.json file
+- I've installed the Express library to use as a server using npm install express --save, also it's been added to the package.json file as a dependency.
+- I've installed nodemon to listen changes and restart the server, this will allow me to develop faster. This one was set a dev dependency. Might be installed globally but setting it on the package json file will ensure that always the same version is being used.
+- I've created two scripts in the package.json file, "start" that will run the server in production mode and "dev" will run the server while developing in the local environment using nodemon. Both will run the server.js file.
+- In the server.js file I set the express server to listen to a set port. I'm also requiring body-parser to allow me to read the body variables sent by the frontend as json objects. Since body-parser is included in the current version of Express, it's not necessary to add it as a dependency.
+- Installed dotenv library to be able to handle environment variables from .env file.
+- I've set up an environment variable to chose the PORT, that will help the deploy to different server technollogies. Also set an MONGO_CONNECTION variable for the database connection.
+- I've set up the folder called "public" for Express to deliver the style files and scripts.
+- I've created the routes in separated files. Each one answering to each endpoint in a controller file. The ones for frontend will deliver the content of the html views in the view folder. The ones for the api will deliver a placeholder json while I'm developing.
+- I've setup the html templates. Since I'm not setting webpack or any bundler to speed up the development for the challenge, I've decided to load React, React DOM and babel from a cdn, this might change for production.
+- Since I'm not considering SEO I didn't set a backend rendering for the content, so the html files will be pretty much empty and everything will be rendered on the fly on the browser.
+- I've set up react components as folders and set script tags to load them as modules using babel to interpret jsx.
+- For the user-info page I've used Vue just to brag :)
+- I've set up a very simple system of migration and seed to have the required users for the demo.
+- I've used a library called bcrypt to hash the passwords. Of course for this challenge the passwords are still hardcoded and readable in the files but that should change for production.
+- I'm skiping other security measures as cors policy, csrf token and captcha.
+- Filled README.md uploaded to a repository and tested online using Heroku as an online dev environment.
